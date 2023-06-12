@@ -1,0 +1,49 @@
+
+@font-face {
+    font-family: "Inconsolata";
+    src: url(/assets/fonts/Inconsolata.ttf) format('ttf');
+    letter-spacing: normal;
+}
+
+@font-face {
+    font-family: "Roboto-Mono";
+    src: url(/assets/fonts/Roboto-Mono-Regular.woff) format('woff');
+    letter-spacing: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(/assets/fonts/Roboto-Regular.woff) format('woff');
+    letter-spacing: normal;
+}
+
+@font-face {
+    font-family: "HiroSans";
+    src: url(/assets/fonts/HiroSans.woff) format('woff');
+    letter-spacing: normal;
+    font-size: 85%;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "HiroSans";
+    src: url(/assets/fonts/HiroSansBold.woff) format('woff');
+    letter-spacing: normal;
+    font-size: 85%;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Calibri";
+    src: url(/assets/fonts/Calibri.woff) format('woff');
+    letter-spacing: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Calibri";
+    src: url(/assets/fonts/Calibri-Bold.woff) format('woff');
+    letter-spacing: normal;
+    font-weight: 600;
+}
+

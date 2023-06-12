@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Calibri";
+    src: url(/assets/fonts/Calibri.woff) format('woff');
+    letter-spacing: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Calibri";
+    src: url(/assets/fonts/Calibri-Bold.woff) format('woff');
+    letter-spacing: normal;
+    font-weight: 600;
+}
+
+
+@font-face {
+  font-family: "Caruta";
+  src: url(/assets/fonts/caruta-Roman.woff) format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Caruta";
+  src: url(/assets/fonts/caruta-Bold.woff) format('woff');
+  font-weight: 600;
+}
+
+
+@font-face {
+    font-family: "Monaco";
+    src: url(/assets/fonts/monaco.ttf) format('ttf');
+    letter-spacing: normal;
+}
+
+@font-face {
+    font-family: "Proxy";
+    src: url(/assets/fonts/Proxy-Regular.woff) format('woff');
+    letter-spacing: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Proxy";
+    src: url(/assets/fonts/Proxy-Bold.woff) format('woff');
+    letter-spacing: normal;
+    font-weight: 600;
+}

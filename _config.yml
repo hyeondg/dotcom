@@ -1,0 +1,48 @@
+# Site settings
+email: contact@hyeondg.com
+
+home:
+  EN: Home
+  JP: Home
+
+portweb: 
+  EN: hyeondg.com/warehouse
+  JP: hyeondg.com/warehouse
+
+footTitle:
+  EN: The Blog of Hyeondong Lee
+  JP: The Blog of Hyeondong Lee
+  
+title:
+  EN: Hyeondong Lee
+  JP: Hyeondong Lee
+
+contact:
+  EN: Please feel free to call me.
+  JP: お問い合わせはこちらです。
+
+weblink:
+  EN: Warehouse
+  JP: Warehouse
+
+description:
+  EN: I am studying computer science and mathematics.
+  JP: こんにちは！立派な学者やエンジニアになるため日々邁進しております。失敗にも屈せず世界に役立てられるように頑張りたいと思います。
+
+index:
+  EN: 
+  JP: jp
+
+defaults:
+  hidden: false
+
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "hyeondg.com" # the base hostname & protocol for your site
+twitter_username: circleoh
+github_username:  hyeondg
+github_subname: hyeondg
+linkedin_username:  hyeondg
+facebook_username: hyeondg
+
+# Build settings
+markdown: kramdown

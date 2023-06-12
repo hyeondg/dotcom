@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+  {% include head.html %}
+
+  <body onload="setupCopyables(); textResize();">
+
+    {% include header.html %}
+
+    <div class="page-content" style="padding-top: 0px;">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

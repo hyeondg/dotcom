@@ -1,0 +1,159 @@
+---
+layout: home
+title: CP
+ref: cp
+permalink: /cp
+lang: EN
+hidden: true
+---
+
+<div class="home">
+
+<h1 class="page-heading">Competitve Programming</h1>
+
+<h3>source code</h3>
+<div class="copyable">
+{% highlight cpp %}
+-homhat-Qobtu
+{% endhighlight %}
+</div>
+<br />
+<h3>.cc</h3>
+<div class="copyable nobash">
+{% highlight cpp %}
+
+#pragma GCC optimize("Ofast")
+#pragma GCC optimize("unroll-loops")
+#pragma GCC target("avx,avx2,sse")
+#include <bits/stdc++.h>
+#define all(v) v.begin(), v.end()
+#define idx(v, x) (lower_bound(all(v), x) - v.begin())
+#define compress(v) sort(all(v)), v.erase(unique(all(v)), v.end())
+#define fastio()    \
+  cin.tie(nullptr); \
+  ios_base::sync_with_stdio(false); 
+#define endl '\n'
+#define eb emplace_back
+#define pb pop_back
+#define mp make_pair 
+#define x first
+#define y second
+constexpr int inf = 1e9 + 7;
+constexpr long double eps = 1e-9;
+using ll = long long;
+using ld = long double;
+using namespace std;
+
+int main() { 
+  fastio();
+  //cheers!
+}
+ 
+{% endhighlight %}
+</div>
+<br />
+<h3>Fenwick Tree</h3>
+<div class="copyable nobash">
+{% highlight cpp %}
+
+const int MX = 1000;
+int tp[MX][MX];
+
+void update(int x, int y, int v) {
+  for (; x < MX; x += x & -x)
+    for (int yy = y; yy < MX; yy += yy & -yy) tp[x][yy] += v;
+}
+
+int query(int x, int y) {
+  int res = 0;
+  for (; x > 0; x -= x & -x)
+    for (int yy = y; yy > 0; yy -= yy & -yy) res += tp[x][yy];
+  return res;
+}
+
+{% endhighlight %}
+</div>
+<br />
+<h3>.rs</h3>
+<div class="copyable nobash">
+{% highlight rs %}
+
+#[allow(unused_imports)]
+use std::cmp::{min,max};
+use std::io::{BufWriter, stdin, stdout, Write};
+use std::iter;
+const INF: i64 = 1e9+7;
+
+#[derive(Default)]
+struct Scanner {
+  buffer: Vec<String>
+}
+
+impl Scanner {
+  fn next<T: std::str::FromStr>(&mut self) -> T {
+    loop {
+      if let Some(token) = self.buffer.pop() {
+        return token.parse().ok().expect("Failed to parse");
+      }
+      let mut input = String::new();
+      stdin().read_line(&mut input).expect("Failed to read");
+      self.buffer = input.split_whitespace().rev().map(String::from).collect();
+    }
+  }
+}
+
+fn main() {
+  //cheers!
+}
+
+
+{% endhighlight %}
+</div>
+<br />
+<h3>.py</h3>
+<div class="copyable nobash">
+{% highlight py %}
+
+from sys import stdin, stdout, setrecursionlimit
+from collections import defaultdict as dd
+from bisect import bisect_left as bl, bisect_right as br
+setrecursionlimit(100000000)
+inf = 100000009
+eps = 1e-9
+
+def rmalloc(size, fill=None):
+  if len(size) == 0:
+    return []
+  if len(size) == 1:
+    return [fill] * size[0]
+  a, b = size[0], size[1:]
+  return [rmalloc(b, fill) for _ in range(a)]
+
+def malloc(*args):
+  return rmalloc(args, None)
+  
+def fill(arr, element):
+  try:
+    for i in arr:
+      fill(i, element)
+  except:
+    for i in range(len(arr)):
+      arr[i] = element
+      
+def sizeof(arr):
+  try:
+    return tuple([len(arr)] + list(sizeof(arr[0])))
+  except:
+    return tuple() 
+    
+#cheers! 
+
+if __name__ == "__main__":
+  #cheers!
+
+
+{% endhighlight %}
+</div>
+
+
+</div>

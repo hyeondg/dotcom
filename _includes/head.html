@@ -1,0 +1,61 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title[page.lang] | escape }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description[page.lang] }}{% endif %}">
+
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}{% for post in posts %}
+  <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />{% endfor %}
+  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}{% for page in pages %}
+  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />{% endfor %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title[page.lang] }}" href="{{ site.feed[page.lang] | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="shortcut icon" type="image/jpg" href="assets/image/favicon.jpg">
+  <link rel="stylesheet" type="text/css" href="/css/fontrender.css">
+  <script>
+  function setupCopyables() {
+    if (navigator.clipboard) {
+      for (const element of document.getElementsByClassName("copyable")) {
+        let text = element.innerText.trim();
+        if(text.startsWith("$")) {
+          text = text.substr().trimLeft();
+        }
+        const button = document.createElement("button");
+        button.innerHTML = "📋";
+        button.setAttribute("aria-label", "Copy to clipboard");
+        button.onclick = () => {
+          navigator.clipboard.writeText(text);
+          button.innerHTML = "✅";
+          setTimeout(() => button.innerHTML="📋", 1000);
+        }
+        element.appendChild(button);
+      }
+    }
+  }
+  
+  function isKanji(ch) {
+    return (ch >= "\u4e00" && ch <= "\u9faf") || (ch >= "\u3400" && ch <= "\u4dbf");
+  }
+  
+  function isJapanese(ch) {
+    return (ch >= "\u3040" && ch <= "\u30ff") || (ch >= "\u3400" && ch <= "\u4dbf") || (ch >= "\u4e00" && ch <= "\u9faf");
+  }
+  
+  function textResize() {
+    let all = document.getElementsByTagName("*");
+    document.querySelectorAll('*').forEach(function(node) {
+      let it = node.innerText;
+      for(let j = 0; j < it.length; j++) {
+        if(isJapanese(it.charAt(j))) {
+          let before = node.style.fontSize.substring(0, 2);
+          node.style.fontSize = (parseInt(before)-10).toString() + "px";
+          break;
+        }
+      }
+    })
+  }
+  </script>
+</head>
